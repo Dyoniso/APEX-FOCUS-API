@@ -117,6 +117,7 @@ OK_PKG_FOCUS_API_NFSE.INIT_NFSE;
 ```
 Cria um novo modelo de NFSE na tabela local do Apex. Retorna uma Referência da Nota.
 
+**DADOS FICTÍCIOS**
 ```
 OK_PKG_FOCUS_API_NFSE.CREATE_PRESTADOR_MODEL(
     l_ref => 'REFERÊNCIA DA NOTA',
@@ -127,6 +128,7 @@ OK_PKG_FOCUS_API_NFSE.CREATE_PRESTADOR_MODEL(
 ```
 Cria o objeto 'PRESTADOR' no modelo da Nota armazenado. Necessário informar a Referência da Nota.
 
+**DADOS FICTÍCIOS**
 ```
 OK_PKG_FOCUS_API_NFSE.CREATE_TOMADOR_MODEL(
     l_ref => 'REFERÊNCIA DA NOTA',
@@ -144,6 +146,7 @@ OK_PKG_FOCUS_API_NFSE.CREATE_TOMADOR_MODEL(
 ```
 Cria o objeto 'TOMADOR' no modelo da Nota armazenado. Necessário informar a Referência da Nota.
 
+**DADOS FICTÍCIOS**
 ```
 OK_PKG_FOCUS_API_NFSE.CREATE_SERVICO_MODEL(
     l_ref => 'REFERÊNCIA DA NOTA',
