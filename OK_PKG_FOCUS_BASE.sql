@@ -5,10 +5,13 @@ create or replace package OK_PKG_FOCUS_BASE as
     
 end OK_PKG_FOCUS_BASE;
 
+
 create or replace package body OK_PKG_FOCUS_BASE as
-    l_endpoint_h varchar2(200) := 'FOCUS_ENDPOINT';
+    l_endpoint_h varchar2(200) := 'FOCUS_ENDPOINT_HOMOLOGAÇÃO';
+    l_endpoint_p varchar2(200) := 'FOCUS_ENDPOINT_PRODUÇÃO';
     l_x_auth_token varchar2(200) := 'FOCUS_USER_TOKEN';
     l_api_version varchar2(10) := 'FOCUS_API_VERSION';
+    l_producao varchar(10) := 'N';
 
     function to_base64(t in varchar2) return varchar2 is
     begin
@@ -17,7 +20,7 @@ create or replace package body OK_PKG_FOCUS_BASE as
 
     function GET_URL return varchar2 is url varchar2(200);
     begin
-        url := l_endpoint_h || '/' || l_api_version;
+        url := (CASE WHEN l_producao = 'S' THEN l_endpoint_p ELSE l_endpoint_h END) || '/' || l_api_version;
         return url;
     end GET_URL;
 
